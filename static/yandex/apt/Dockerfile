@@ -1,6 +1,8 @@
 FROM browsers/base:7.4.2
 
-ARG VERSION=19.4.2.698-1
+ARG VERSION=25.2.1.939-1
+ARG PACKAGE=yandex-browser-stable
+ARG INSTALL_DIR=browser 
 
 LABEL browser=yandex-browser-stable:$VERSION
 

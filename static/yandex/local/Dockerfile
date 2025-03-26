@@ -1,8 +1,10 @@
 FROM browsers/base:7.4.2
 
 ARG VERSION=noop
+ARG PACKAGE=yandex-browser-stable
+ARG INSTALL_DIR=browser
 
-LABEL browser=yandex-browser-stable:$VERSION
+LABEL browser=$PACKAGE:$VERSION
 
 RUN \
         apt-get update && \
@@ -40,6 +42,9 @@ RUN \
          libxrender1 \
          libxss1 \
          libxtst6 \
+         libgbm1 \
+         libu2f-udev \
+         libvulkan1 \
          debconf \
          gnupg \
          libudev1 \

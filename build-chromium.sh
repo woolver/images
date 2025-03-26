@@ -18,7 +18,7 @@ go build
 git clone -b add-missing-dependency https://github.com/sskorol/selenoid-container-tests.git ../selenoid-container-tests
 
 # Force build browsers/base image as it has arm64-specific updates
-cd ./selenium/base && docker build --no-cache --build-arg UBUNTU_VERSION=18.04 -t browsers/base:$BASE_TAG . && docker system prune -f
+cd ./selenium/base && docker build --no-cache --build-arg UBUNTU_VERSION=25.04 -t browsers/base:$BASE_TAG . && docker system prune -f
 
 # Build chromium image
 cd ../../ && ./images chromium -b $VERSION -t selenoid/vnc:$TAG --test && docker system prune -f
